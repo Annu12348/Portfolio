@@ -4,7 +4,7 @@ import Fixed from './components/Fixed'
 
 const App = () => {
   return (
-    <div className='w-full h-screen'>
+    <div className="w-full min-h-screen bg-zinc-900">
       <Router />
       <Fixed />
     </div>

@@ -6,6 +6,7 @@ import { IoMdLink } from "react-icons/io";
 import { GoArrowDown } from "react-icons/go";
 
 const Home = () => {
+  
   return (
     <div className="bg-zinc-900 p-[1px] w-full min-h-screen relative ">
       <Navigation />

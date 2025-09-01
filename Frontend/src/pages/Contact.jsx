@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { CgMail } from "react-icons/cg";
 import { FaPhoneAlt } from "react-icons/fa";
 import { LuGithub } from "react-icons/lu";
@@ -9,7 +9,7 @@ import { BsSend } from "react-icons/bs";
 import Footer from "../components/Footer";
 
 const Contact = () => {
-  document.title="Annu Singh | Full Stack Developer | Contact"
+  
   return (
     <div className="w-full  bg-zinc-900 min-h-screen   font-semibold">
       <div className="w-full min-h-[92.7vh]  py-5 md:px-45 px-4">
