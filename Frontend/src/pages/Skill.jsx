@@ -72,7 +72,7 @@ const Skill = () => {
       skill: "chatGpt",
       icon: <IoChatbubblesOutline />,
       description:
-        "AI assistant for programming tasks problem solving in chatgpt.",
+        "AI assistant for programming tasks and problem solving in ChatGPT.",
       category: "tool",
     },
   ];
@@ -95,9 +95,8 @@ const Skill = () => {
             Skills
           </span>
         </h1>
-        <p className="text-zinc-400 text-center text-md tracking-tight font-semibold leading-none mt-4.5">
-          Technical proficiencies and tools I use to build modern web
-          applications
+        <p className="text-zinc-400 text-center text-md tracking-tight font-semibold leading-none mt-4">
+          Technical proficiencies and tools I use to build modern web applications
         </p>
         <div className="mt-7 flex flex-wrap justify-center items-center gap-4">
           {buttons.map((btn, index) => (

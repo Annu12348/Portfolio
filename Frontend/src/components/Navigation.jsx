@@ -25,7 +25,7 @@ const Navigation = () => {
   }, [val]);
 
   return (
-    <div className=" fixed top-0  bg-zinc-800 w-full ">
+    <div className=" fixed top-0  bg-zinc-800 w-full z-50 ">
       <div className="px-6  py-2 flex items-center justify-between w-full">
         <Link
           to="/"
