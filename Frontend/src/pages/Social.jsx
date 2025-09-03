@@ -31,7 +31,7 @@ const Social = () => {
      */}
 
   return (
-    <div className="w-full bg-zinc-800 md:px-0 px-4 flex items-center justify-center min-h-screen p-1  flex-col">
+    <div className="w-full bg-zinc-900 md:px-0 px-4 flex items-center justify-center min-h-screen p-1  flex-col">
       <h1 className="text-white md:text-3xl font-semibold">
         My{" "}
         <span className="bg-gradient-to-t from-red-900 to-blue-500 bg-clip-text text-transparent">

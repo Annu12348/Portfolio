@@ -89,29 +89,29 @@ const Skill = () => {
     <div className="bg-zinc-900 p-[1px] w-full min-h-screen">
       <Navigation />
       <div className="w-full min-h-[91.9vh] p-3 bg-zinc-900 flex flex-col items-center justify-center mt-14">
-        <h1 className="text-white text-4xl font-semibold tracking-tight leading-none">
+        <h1 className="text-white  text-4xl font-semibold tracking-tight leading-none">
           My{" "}
           <span className="bg-gradient-to-t from-red-900 to-blue-500 bg-clip-text text-transparent">
             Skills
           </span>
         </h1>
-        <p className="text-zinc-400 text-center text-md tracking-tight font-semibold leading-none mt-4">
+        <p className="text-zinc-400 text-center text-md tracking-tight font-semibold leading-none mt-8">
           Technical proficiencies and tools I use to build modern web applications
         </p>
-        <div className="mt-7 flex flex-wrap justify-center items-center gap-4">
+        <div className="mt-12 flex flex-wrap justify-center items-center gap-4">
           {buttons.map((btn, index) => (
             <button
               key={index}
               onClick={() => setActiveCategory(btn.name)}
               className={`text-md py-2 px-5 ${
                 activeCategory === btn.name ? "bg-zinc-500" : "bg-zinc-800"
-              } rounded-4xl capitalize text-white font-semibold`}
+              } rounded-4xl capitalize text-white font-semibold `}
             >
               {btn.name}
             </button>
           ))}
         </div>
-        <div className="w-full mt-12 flex flex-wrap md:px-30 items-center justify-center gap-6">
+        <div className="w-full mt-16 flex flex-wrap md:px-30 items-center justify-center gap-6">
           {filterSkills.map((sk, index) => (
             <div
               key={index}
