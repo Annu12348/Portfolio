@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { CgMail } from "react-icons/cg";
 import { FaPhoneAlt } from "react-icons/fa";
 import { LuGithub } from "react-icons/lu";
@@ -7,8 +7,34 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
 import { BsSend } from "react-icons/bs";
 import Footer from "../components/Footer";
+import axios from 'axios'
 
 const Contact = () => {
+
+  const [val, setVal] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const contactapi = async () => {
+    try {
+      const response = await axios.post("http://localhost:3000/contact", val, {withCredentials: true})
+      console.log(response)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  const handleclicked  = () => {
+    contactapi()
+    console.log(val);
+    setVal({
+      name: "",
+      email: "",
+      message: ""
+    })
+  }
   
   return (
     <div className="w-full  bg-zinc-900 min-h-screen   font-semibold">
@@ -173,15 +199,19 @@ const Contact = () => {
                   type="text"
                   placeholder="enter your name"
                   required
+                  value={val.name}
+                  onChange={(e) => setVal({...val, name: e.target.value})}
                 />
               </div>
               <div className="flex flex-col mt-6">
                 <label className="text-white capitalize">email addresh</label>
                 <input
                   className="border px-2 py-2 outline-none mt-1 border-zinc-800 rounded text-zinc-500 capitalize"
-                  type="text"
-                  placeholder="enter your name"
+                  type="email"
+                  placeholder="enter your email address"
                   required
+                  value={val.email}
+                  onChange={(e) => setVal({ ...val, email: e.target.value })}
                 />
               </div>
               <div className="flex flex-col mt-6">
@@ -191,9 +221,11 @@ const Contact = () => {
                 placeholder="enter your message"
                 rows="5"
                 required
+                value={val.message}
+                onChange={(e) => setVal({...val, message: e.target.value})}
               />
               </div>
-              <button className="flex flex-row-reverse capitalize text-white font-semibold rounded-lg px-3 py-3 justify-center bg-gradient-to-r from-red-900 to-blue-500  gap-2 items-center mt-7 w-full text-center">
+              <button onClick={handleclicked} className="flex flex-row-reverse capitalize text-white font-semibold rounded-lg px-3 py-3 justify-center bg-gradient-to-r from-red-900 to-blue-500  gap-2 items-center mt-7 w-full text-center">
               send message <span className="text-white"><BsSend /></span>
               </button>
             </div>

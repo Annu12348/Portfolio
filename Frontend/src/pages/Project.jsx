@@ -7,7 +7,7 @@ import { FiGithub } from "react-icons/fi";
 const Project = () => {
   const project = [
     {
-      image: "./public/LMS.png",
+      image: "/LMS.png",
       name: "learning management system",
       description:
         "Full-stack LMS with React, Redux, Node.js, Express, MongoDB; secure authentication, course management, role-based access, and interactive learning.",
@@ -16,7 +16,7 @@ const Project = () => {
       category: "full stack",
     },
     {
-      image: "./public/visionary-architect.png",
+      image: "/visionary-architect.png",
       description:
         "A responsive frontend architecture studio site using HTML, CSS, JS with Lenis smooth scroll, GSAP animations, and locomotive interactivity.",
       name: "visionary architecture",
@@ -25,7 +25,7 @@ const Project = () => {
       category: "frontend",
     },
     {
-      image: "./public/omegle.png",
+      image: "/omegle.png",
       description:
         "Real-time anonymous chat using Node, Express, MongoDB, EJS templating, and Socket.io for seamless user pairing and messaging.",
       name: "omegle clone",

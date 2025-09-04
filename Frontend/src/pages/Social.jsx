@@ -11,24 +11,7 @@ const Social = () => {
   const socialBoxRef = useRef();
   gsap.registerPlugin(ScrollTrigger);
   
-  {/*
-    useEffect(() => {
-    document.title = "Annu Singh | Full Stack Developer | Social";
-
-    if (socialBoxRef.current) {
-      gsap.to(socialBoxRef.current, {
-        y: 100,
-        duration: 7,
-        scrollTrigger: {
-          trigger: socialBoxRef.current,
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-        },
-      });
-    }
-  }, []);
-     */}
+  
 
   return (
     <div className="w-full bg-zinc-900 md:px-0 px-4 flex items-center justify-center min-h-screen p-1  flex-col">
