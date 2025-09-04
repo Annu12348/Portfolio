@@ -23,7 +23,11 @@ const Contact = () => {
         val,
         { withCredentials: true }
       );
-      console.log(response);
+      setVal({
+        name: "",
+        email: "",
+        message: "",
+      });
     } catch (error) {
       console.error(error);
     }
@@ -32,12 +36,6 @@ const Contact = () => {
   const handleclicked = (e) => {
     e.preventDefault();
     contactapi();
-    console.log(val);
-    setVal({
-      name: "",
-      email: "",
-      message: "",
-    });
   };
 
   return (
