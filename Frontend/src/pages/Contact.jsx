@@ -7,35 +7,39 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa6";
 import { BsSend } from "react-icons/bs";
 import Footer from "../components/Footer";
-import axios from 'axios'
+import axios from "axios";
 
 const Contact = () => {
-
   const [val, setVal] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
 
   const contactapi = async () => {
     try {
-      const response = await axios.post("http://localhost:3000/contact", val, {withCredentials: true})
-      console.log(response)
+      const response = await axios.post(
+        "https://portfolio-backend-1hfq.onrender.com/contact",
+        val,
+        { withCredentials: true }
+      );
+      console.log(response);
     } catch (error) {
-      console.error(error)
+      console.error(error);
     }
-  }
+  };
 
-  const handleclicked  = () => {
-    contactapi()
+  const handleclicked = (e) => {
+    e.preventDefault();
+    contactapi();
     console.log(val);
     setVal({
       name: "",
       email: "",
-      message: ""
-    })
-  }
-  
+      message: "",
+    });
+  };
+
   return (
     <div className="w-full  bg-zinc-900 min-h-screen   font-semibold">
       <div className="w-full min-h-[92.7vh]  py-5 md:px-45 px-4">
@@ -192,42 +196,48 @@ const Contact = () => {
             </h1>
             <div className="h-0.5 w-24  bg-gradient-to-r mt-1.5 from-red-900 to-blue-500  "></div>
             <div className="mt-5">
-              <div className="flex flex-col ">
-                <label className="text-white capitalize">your name</label>
+              <form onSubmit={handleclicked}>
+                <div className="flex flex-col ">
+                  <label className="text-white capitalize">your name</label>
+                  <input
+                    className="border mt-1 px-2 outline-none py-2 border-zinc-800 rounded text-zinc-500 capitalize"
+                    type="text"
+                    placeholder="enter your name"
+                    required
+                    value={val.name}
+                    onChange={(e) => setVal({ ...val, name: e.target.value })}
+                  />
+                </div>
+                <div className="flex flex-col mt-6">
+                  <label className="text-white capitalize">email addresh</label>
+                  <input
+                    className="border px-2 py-2 outline-none mt-1 border-zinc-800 rounded text-zinc-500 capitalize"
+                    type="email"
+                    placeholder="enter your email address"
+                    required
+                    value={val.email}
+                    onChange={(e) => setVal({ ...val, email: e.target.value })}
+                  />
+                </div>
+                <div className="flex flex-col mt-6">
+                  <label className="capitalize text-white">message</label>
+                  <textarea
+                    className="border px-2 py-2 mt-1 resize-none outline-none border-zinc-800 rounded text-zinc-500 capitalize"
+                    placeholder="enter your message"
+                    rows="5"
+                    required
+                    value={val.message}
+                    onChange={(e) =>
+                      setVal({ ...val, message: e.target.value })
+                    }
+                  />
+                </div>
                 <input
-                  className="border mt-1 px-2 outline-none py-2 border-zinc-800 rounded text-zinc-500 capitalize"
-                  type="text"
-                  placeholder="enter your name"
-                  required
-                  value={val.name}
-                  onChange={(e) => setVal({...val, name: e.target.value})}
+                  className="flex flex-row-reverse capitalize text-white font-semibold rounded-lg px-3 py-3 justify-center bg-gradient-to-r from-red-900 to-blue-500  gap-2 items-center mt-7 w-full text-center"
+                  type="submit"
+                  value='send message'
                 />
-              </div>
-              <div className="flex flex-col mt-6">
-                <label className="text-white capitalize">email addresh</label>
-                <input
-                  className="border px-2 py-2 outline-none mt-1 border-zinc-800 rounded text-zinc-500 capitalize"
-                  type="email"
-                  placeholder="enter your email address"
-                  required
-                  value={val.email}
-                  onChange={(e) => setVal({ ...val, email: e.target.value })}
-                />
-              </div>
-              <div className="flex flex-col mt-6">
-              <label className="capitalize text-white">message</label>
-              <textarea
-                className="border px-2 py-2 mt-1 resize-none outline-none border-zinc-800 rounded text-zinc-500 capitalize"
-                placeholder="enter your message"
-                rows="5"
-                required
-                value={val.message}
-                onChange={(e) => setVal({...val, message: e.target.value})}
-              />
-              </div>
-              <button onClick={handleclicked} className="flex flex-row-reverse capitalize text-white font-semibold rounded-lg px-3 py-3 justify-center bg-gradient-to-r from-red-900 to-blue-500  gap-2 items-center mt-7 w-full text-center">
-              send message <span className="text-white"><BsSend /></span>
-              </button>
+              </form>
             </div>
           </div>
         </div>
@@ -238,5 +248,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-
