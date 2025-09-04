@@ -4,11 +4,10 @@ import cors from 'cors'
 
 const app = express();
 app.use(cors({
-    origin: "http://localhost:5173",  // frontend ka origin
+    origin: ["http://localhost:5173", "https://portfolio-annu-singh-nj6n.onrender.com/"],  // frontend ka origin
   credentials: true 
 }))
 app.use(express.json());
-//app.use(express.urlencoded({extended: true}));
 
 app.use("/contact", contactRoutes)
 
