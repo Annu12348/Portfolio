@@ -9,6 +9,10 @@ import { DiMongodb } from "react-icons/di";
 import { VscVscode } from "react-icons/vsc";
 import { FiGithub } from "react-icons/fi";
 import { IoChatbubblesOutline } from "react-icons/io5";
+import { FaNodeJs } from "react-icons/fa";
+import { GiSteamLocomotive } from "react-icons/gi";
+import { MdSettingsApplications } from "react-icons/md";
+import { SiReduxsaga } from "react-icons/si";
 
 const Skill = () => {
   const buttons = [
@@ -45,8 +49,32 @@ const Skill = () => {
       category: "frontend",
     },
     {
+      skill: "Redux.JS",
+      icon: <SiReduxsaga />,
+      description: "Redux: State management for predictable React applications.",
+      category: "frontend",
+    },
+    {
+      skill: "Locomotive.JS",
+      icon: <GiSteamLocomotive />,
+      description: "Smooth scroll animations for adaptive, component-based UI.",
+      category: "frontend",
+    },
+    {
+      skill: "GSAP.JS",
+      icon: <MdSettingsApplications />,
+      description: "GSAP: Powerful animations for interactive web experiences.",
+      category: "frontend",
+    },
+    {
       skill: "express.JS",
       icon: <SiExpress />,
+      description: "Express.js: Node.js framework for backend APIs and middleware",
+      category: "backend",
+    },
+    {
+      skill: "Node.JS",
+      icon: <FaNodeJs />,
       description: "Node.js web application framework, backend services.",
       category: "backend",
     },
