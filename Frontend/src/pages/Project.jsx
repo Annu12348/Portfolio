@@ -42,6 +42,15 @@ const Project = () => {
       code: "https://github.com/Annu12348/Obys-Agence",
       category: "frontend",
     },
+    {
+      image: "/movie.png",
+      description:
+        "A responsive frontend Movie Clone site using React, tailwindcss, Redux Toolkit  with Lenis smooth scroll, GSAP animations, and locomotive interactivity.",
+      name: "Movie Clone",
+      link: "https://movie-clone-fwjc.onrender.com/",
+      code: "https://github.com/Annu12348/movie-clone",
+      category: "frontend",
+    },
   ];
 
   return (
