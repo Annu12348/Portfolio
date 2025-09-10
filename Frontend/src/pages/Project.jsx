@@ -33,6 +33,15 @@ const Project = () => {
       code: "https://github.com/Annu12348/Omegle-Clones",
       category: "full stack",
     },
+    {
+      image: "/obys.png",
+      description:
+        "On the OBYS website, I used JS, HTML, CSS, Locomotive, GSAP, Shery and made it fully responsive with smooth animations and effects.",
+      name: "Obys Website",
+      link: "https://obys-again.vercel.app/",
+      code: "https://github.com/Annu12348/Obys-Agence",
+      category: "frontend",
+    },
   ];
 
   return (
