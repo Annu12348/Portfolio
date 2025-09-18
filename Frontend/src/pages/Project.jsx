@@ -51,6 +51,15 @@ const Project = () => {
       code: "https://github.com/Annu12348/movie-clone",
       category: "frontend",
     },
+    {
+      image: "/QHS.png",
+      description:
+        "A responsive frontend Movie Clone site using React, tailwindcss, Redux Toolkit  with Lenis smooth scroll, GSAP animations, and locomotive interactivity.",
+      name: "Movie Clone",
+      link: "https://movie-clone-fwjc.onrender.com/",
+      code: "https://github.com/Annu12348/movie-clone",
+      category: "frontend",
+    },
   ];
 
   return (
@@ -62,16 +71,19 @@ const Project = () => {
         </h1>
         <div className="w-full hidden flex-wrap md:px-20 md:flex gap-5 items-center justify-center  p-1 mt-8 ">
           {project.map((projects, index) => (
-            <div key={index} className=" md:w-[49%] h-[43vh] w-full  hover:border-white relative hover:border-1  rounded-lg overflow-hidden group">
+            <div
+              key={index}
+              className=" md:w-[49%] h-[43vh] w-full  hover:border-white relative  hover:border-1  rounded-lg overflow-hidden group"
+            >
               <img
                 className="w-full h-full object-cover object-center transform transition-transform duration-700 ease-in-out group-hover:scale-105 "
                 src={projects.image}
               />
-              <div className="absolute top-[40%] md:top-[60%] left-4.5 ">
-                <h1 className="text-xl tracking-tight capitalize font-semibold  text-white top-0">
+              <div className=" absolute top-[40%] md:top-[60%] left-4.5 ">
+                <h1 className="text-xl tracking-tight capitalize font-black  text-zinc-300 top-0">
                   {projects.name}
                 </h1>
-                <p className=" mt-1 text-zinc-300 tracking-tight ">
+                <p className=" mt-1 text-zinc-300 font-semibold tracking-tight ">
                   {projects.description}
                 </p>
                 <div className="flex gap-6 mt-2">
@@ -90,10 +102,10 @@ const Project = () => {
                     to={projects.code}
                     className="flex gap-2"
                   >
-                    <span className="text-blue-200 mt-0.5 text-xl font-semibold">
+                    <span className="text-blue-400 mt-0.5 text-xl font-semibold">
                       <FiGithub />
                     </span>
-                    <h1 className="text-blue-200 capitalize font-semibold">
+                    <h1 className="text-blue-400 capitalize font-semibold">
                       code
                     </h1>
                   </Link>
@@ -103,9 +115,29 @@ const Project = () => {
           ))}
         </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div className="w-full   md:hidden ">
           {project.map((pro, index) => (
-            <div key={index} className="w-full mt-7 pb-4 bg-zinc-600 rounded-lg ">
+            <div
+              key={index}
+              className="w-full mt-7 pb-4 bg-zinc-600 rounded-lg "
+            >
               <div className="w-full h-[24vh]  rounded-t-lg overflow-hidden ">
                 <img
                   className="w-full h-full object-cover object-[center-70%] "
