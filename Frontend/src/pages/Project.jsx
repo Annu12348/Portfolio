@@ -56,8 +56,17 @@ const Project = () => {
       description:
         "A responsive frontend Movie Clone site using React, tailwindcss, Redux Toolkit  with Lenis smooth scroll, GSAP animations, and locomotive interactivity.",
       name: "Movie Clone",
-      link: "https://movie-clone-fwjc.onrender.com/",
-      code: "https://github.com/Annu12348/movie-clone",
+      link: "https://quiet-hours-scheduler-1.onrender.com/",
+      code: "https://github.com/Annu12348/quiet-hours-scheduler",
+      category: "frontend",
+    },
+    {
+      image: "/loading.png",
+      description:
+        "A responsive frontend Movie Clone site using React, tailwindcss, Redux Toolkit  with Lenis smooth scroll, GSAP animations, and locomotive interactivity.",
+      name: "Movie Clone",
+      link: "https://screenings-interview.onrender.com/",
+      code: "https://github.com/Annu12348/screening-interview",
       category: "frontend",
     },
   ];
