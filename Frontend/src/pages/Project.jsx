@@ -82,13 +82,13 @@ const Project = () => {
           {project.map((projects, index) => (
             <div
               key={index}
-              className=" md:w-[49%] h-[43vh] w-full  hover:border-white relative  hover:border-1  rounded-lg overflow-hidden group"
+              className=" md:w-[49%] h-[43vh] w-full  hover:border-white relative  hover:border-1  rounded-lg overflow-hidden group flex flex-col"
             >
               <img
-                className="w-full h-full object-cover object-center transform transition-transform duration-700 ease-in-out group-hover:scale-105 "
+                className="w-full h-[60%] object-cover object-center transform transition-transform duration-700 ease-in-out group-hover:scale-105 "
                 src={projects.image}
               />
-              <div className=" absolute top-[40%] md:top-[60%] left-4.5 ">
+              <div className="w-full flex-1 px-5 py-3 bg-zinc-900/90">
                 <h1 className="text-xl tracking-tight capitalize font-black  text-zinc-300 top-0">
                   {projects.name}
                 </h1>
