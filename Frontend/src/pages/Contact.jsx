@@ -10,6 +10,7 @@ import Footer from "../components/Footer";
 import axios from "axios";
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
   const [val, setVal] = useState({
     name: "",
     email: "",
@@ -18,7 +19,8 @@ const Contact = () => {
 
   const contactapi = async () => {
     try {
-      const response = await axios.post(
+      setLoading(true);
+      await axios.post(
         "https://portfolio-backend-1hfq.onrender.com/contact",
         val,
         { withCredentials: true }
@@ -30,6 +32,8 @@ const Contact = () => {
       });
     } catch (error) {
       console.error(error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -62,6 +66,7 @@ const Contact = () => {
                   className="text-white mt-1.5 font-semibold  hover:underline hover:text-red-400 block"
                   href="mailto:annu37752@gmail.com"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   annu37752@gmail.com
                 </a>
@@ -79,6 +84,7 @@ const Contact = () => {
                   className="text-white mt-1.5 font-semibold  hover:underline hover:text-red-400 block"
                   href="tel:+918959732124"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   +918959732124
                 </a>
@@ -96,6 +102,7 @@ const Contact = () => {
                   className="text-white mt-1.5 font-semibold  hover:underline hover:text-red-400 block"
                   href="https://github.com/Annu12348"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   github.com/annu12348
                 </a>
@@ -113,6 +120,7 @@ const Contact = () => {
                   className="text-white mt-1.5 font-semibold  hover:underline hover:text-red-400 block"
                   href="https://www.linkedin.com/in/annu-singh-458ab9292/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Annu Singh
                 </a>
@@ -130,6 +138,7 @@ const Contact = () => {
                   className="text-white mt-1.5 font-semibold  hover:underline hover:text-red-400 block"
                   href="https://www.instagram.com/_heart_king_.annusingh._/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   _heart_king_.annusingh._
                 </a>
@@ -147,6 +156,7 @@ const Contact = () => {
                   className="text-white  mt-1.5 font-semibold  hover:underline hover:text-red-400 block"
                   href="https://www.facebook.com/profile.php?id=100060431210733"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   annu singh
                 </a>
@@ -161,6 +171,7 @@ const Contact = () => {
                 className="text-2xl p-3 rounded-full text-red-400 hover:rotate-12 hover:scale-120  bg-zinc-600 mt-0.5"
                 href="https://github.com/Annu12348"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <LuGithub />
               </a>
@@ -168,6 +179,7 @@ const Contact = () => {
                 className="text-2xl p-3  text-blue-100 hover:rotate-12 hover:scale-120 rounded-full bg-blue-600 mt-0.5"
                 href="https://www.linkedin.com/in/annu-singh-458ab9292/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <TiSocialLinkedin />
               </a>
@@ -175,16 +187,18 @@ const Contact = () => {
                 className="text-2xl p-3 text-red-400 hover:rotate-12 hover:scale-120 rounded-full bg-gradient-to-l from-red-900 to-blue-500 mt-0.5"
                 href="https://www.instagram.com/_heart_king_.annusingh._/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaInstagram />
               </a>
-              <span
+              <a
                 className="text-2xl p-3  text-blue-100 hover:rotate-12 hover:scale-120 rounded-full bg-blue-900 mt-0.5"
                 href="https://www.facebook.com/profile.php?id=100060431210733"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaFacebookF />
-              </span>
+              </a>
             </div>
           </div>
 
@@ -207,11 +221,11 @@ const Contact = () => {
                   />
                 </div>
                 <div className="flex flex-col mt-6">
-                  <label className="text-white capitalize">email addresh</label>
+                  <label className="text-white capitalize">email address</label>
                   <input
-                    className="border px-2 py-2 outline-none mt-1 border-zinc-800 rounded text-zinc-500 capitalize"
+                    className="border px-2 py-2 outline-none mt-1 border-zinc-800 rounded text-zinc-500 "
                     type="email"
-                    placeholder="enter your email address"
+                    placeholder="Enter Your Email Address"
                     required
                     value={val.email}
                     onChange={(e) => setVal({ ...val, email: e.target.value })}
@@ -230,11 +244,32 @@ const Contact = () => {
                     }
                   />
                 </div>
-                <input
-                  className="flex flex-row-reverse capitalize text-white font-semibold rounded-lg px-3 py-3 justify-center bg-gradient-to-r from-red-900 to-blue-500  gap-2 items-center mt-7 w-full text-center"
+                <button
                   type="submit"
-                  value='send message'
-                />
+                  disabled={loading}
+                  className="flex flex-row-reverse capitalize text-white font-semibold rounded-lg px-3 py-3 justify-center bg-gradient-to-r from-red-900 to-blue-500  gap-2 items-center mt-7 w-full text-center"
+                >
+                  {loading ? (
+                    <div className="flex justify-center items-center">
+                      <svg className="animate-spin h-6 w-6 text-white" viewBox="0 0 24 24">
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                          fill="none"
+                        />
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                        />
+                      </svg>
+                    </div>
+                  ) : "send message"}
+                </button>
               </form>
             </div>
           </div>

@@ -7,7 +7,8 @@ const debuglog = debug("development:mongoose")
 function connectDataBase() {
     mongoose.connect(config.MONGODB_URL)
     .then (() => {
-        debuglog("connect the successfully mongodb")
+        debuglog
+        console.log("connect the successfully mongodb")
     })
     .catch(error => {
         debuglog(error)

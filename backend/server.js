@@ -8,5 +8,5 @@ connectDataBase()
 
 
 app.listen(config.PORT, () => {
-    debuglog("3000")
-})
+    console.log(`Server is running on port ${config.PORT}`);
+});
