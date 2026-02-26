@@ -7,6 +7,15 @@ import { FiGithub } from "react-icons/fi";
 const Project = () => {
   const project = [
     {
+      image: "/vingo.png",
+      name: "Vingo Restorent",
+      description:
+        "Full-stack LMS with React, Redux, Node.js, Express, MongoDB, secure authentication, course management, role-based access, and interactive learning.",
+      code: "https://github.com/Annu12348/LMS",
+      link: "https://lms-ncrk.onrender.com/",
+      category: "full stack",
+    },
+    {
       image: "/LMS.png",
       name: "learning management system",
       description:
