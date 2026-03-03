@@ -10,9 +10,18 @@ const Project = () => {
       image: "/vingo.png",
       name: "Vingo Restorent",
       description:
-        "Full-stack LMS with React, Redux, Node.js, Express, MongoDB, secure authentication, course management, role-based access, and interactive learning.",
-      code: "https://github.com/Annu12348/LMS",
-      link: "https://lms-ncrk.onrender.com/",
+        "Full-stack Food Delivery Application with React, Redux, Node.js, Express, MongoDB, secure authentication, course management, role-based access, and interactive learning.",
+      code: "https://github.com/Annu12348/Vingo",
+      link: "https://vingo-frontend-cm2c.onrender.com/",
+      category: "full stack",
+    },
+    {
+      image: "/employee.png",
+      name: "Employee Management",
+      description:
+        "Full-stack Employee Management with React, Redux, Node.js, Express, MongoDB, secure authentication, course management, role-based access, and interactive learning.",
+      code: "https://github.com/Annu12348/machines_task",
+      link: "https://machines-task.vercel.app/",
       category: "full stack",
     },
     {
