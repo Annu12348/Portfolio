@@ -14,15 +14,17 @@ const Project = () => {
       code: "https://github.com/Annu12348/Vingo",
       link: "https://vingo-frontend-cm2c.onrender.com/",
       category: "full stack",
+      techStack: "React.JS, Node.JS, Express.JS, MongoDB.JS"
     },
     {
       image: "/employee.png",
-      name: "Employee Management",
+      name: "AI Powered Employee Task Management System",
       description:
-        "Full-stack Employee Management with React, Redux, Node.js, Express, MongoDB, secure authentication, course management, role-based access, and interactive learning.",
+        "AI-powered employee task management system with JWT authentication, role-based access, analytics dashboard, notifications, file uploads, and productivity insights.",
       code: "https://github.com/Annu12348/machines_task",
       link: "https://machines-task.vercel.app/",
       category: "full stack",
+      techStack: "React.JS, Node.JS, Express.JS, MongoDB.JS"
     },
     {
       image: "/LMS.png",
@@ -32,6 +34,7 @@ const Project = () => {
       code: "https://github.com/Annu12348/LMS",
       link: "https://lms-ncrk.onrender.com/",
       category: "full stack",
+      techStack: "React.JS, Node.JS, Express.JS, MongoDB.JS"
     },
     {
       image: "/visionary-architect.png",
@@ -41,6 +44,7 @@ const Project = () => {
       link: "https://visionary-architect.vercel.app/",
       code: "https://github.com/Annu12348/Visionary--Architect",
       category: "frontend",
+      techStack: "JavaScript"
     },
     {
       image: "/omegle.png",
@@ -50,6 +54,7 @@ const Project = () => {
       link: "https://omegle-clones.onrender.com/",
       code: "https://github.com/Annu12348/Omegle-Clones",
       category: "full stack",
+      techStack: "React.JS, Node.JS, Express.JS, MongoDB.JS"
     },
     {
       image: "/obys.png",
@@ -59,6 +64,7 @@ const Project = () => {
       link: "https://obys-again.vercel.app/",
       code: "https://github.com/Annu12348/Obys-Agence",
       category: "frontend",
+      techStack: "JavaScript"
     },
     {
       image: "/movie.png",
@@ -68,6 +74,7 @@ const Project = () => {
       link: "https://movie-clone-fwjc.onrender.com/",
       code: "https://github.com/Annu12348/movie-clone",
       category: "frontend",
+      techStack: "React.JS"
     },
     {
       image: "/QHS.png",
@@ -77,6 +84,7 @@ const Project = () => {
       link: "https://quiet-hours-scheduler-1.onrender.com/",
       code: "https://github.com/Annu12348/quiet-hours-scheduler",
       category: "frontend",
+      techStack: "JavaScript"
     },
     {
       image: "/loading.png",
@@ -86,6 +94,7 @@ const Project = () => {
       link: "https://screenings-interview.onrender.com/",
       code: "https://github.com/Annu12348/screening-interview",
       category: "frontend",
+      techStack: "JavaScript"
     },
   ];
 
@@ -100,13 +109,13 @@ const Project = () => {
           {project.map((projects, index) => (
             <div
               key={index}
-              className=" md:w-[49%] h-[43vh] w-full  hover:border-white relative  hover:border-1  rounded-lg overflow-hidden group flex flex-col"
+              className=" md:w-[49%] shadow h-[43vh] w-full  hover:border-white relative  hover:border-1  rounded-lg overflow-hidden group flex flex-col"
             >
               <img
                 className="w-full h-[60%] object-cover object-center transform transition-transform duration-700 ease-in-out group-hover:scale-105 "
                 src={projects.image}
               />
-              <div className="w-full flex-1 px-5 py-3 bg-zinc-900/90">
+              <div className="w-full flex-1 px-5 py-3 bg-zinc-800">
                 <h1 className="text-xl tracking-tight capitalize font-black  text-zinc-300 top-0">
                   {projects.name}
                 </h1>
