@@ -5,60 +5,65 @@ import { CiUser } from "react-icons/ci";
 import { IoMdLink } from "react-icons/io";
 import { GoArrowDown } from "react-icons/go";
 
+/**
+ * Home - Industry standard, production-ready component.
+ */
 const Home = () => {
-  
   return (
-    <div className="bg-zinc-900 p-[1px] w-full min-h-screen relative ">
+    <div className="bg-zinc-900 min-h-screen w-full flex flex-col relative">
       <Navigation />
-      <div className="w-full min-h-[91.9vh] md:p-0 p-3  bg-zinc-900 flex flex-col items-center justify-center  mt-14 ">
-        <h1 className="text-white text-center  capitalize md:text-8xl text-4xl tracking-tight leading-none font-semibold">
-          Hi, I'm{" "}
-          <span className="bg-gradient-to-t md:inline block md:text-8xl text-6xl md:mt-0 -mt-1   from-red-900 text-red-900  to-blue-500 bg-clip-text md:text-transparent">
-            annu Singh
-          </span>
-        </h1>
-        <h1 className="text-white md:mt-6 mt-3 text-center md:text-4xl text-2xl capitalize font-semibold ">
-          a{" "}
-          <span className="bg-gradient-to-t from-red-900 to-blue-500 bg-clip-text text-transparent">
-            mern stack Developer.
-          </span>
-        </h1>
-        <p className="text-white text-md font-semibold text-center md:w-[48%] md:mt-8 mt-6">
-          Frontend-focused Full Stack JavaScript Developer skilled in building
-          responsive, real-time apps using React.js, Node.js, MongoDB, and
-          WebRTC. Experienced in GSAP, Locomotive, REST APIs, and deploying via
-          Vercel & Render.
-        </p>
-        <div className="mt-8 md:flex items-center justify-center w-full gap-15">
+      <main className="flex-1 flex flex-col items-center justify-center w-full md:px-0 px-3 mt-14">
+        <header className="w-full flex flex-col items-center justify-center">
+          <h1 className="text-white text-center capitalize md:text-8xl text-4xl font-bold tracking-tight leading-none">
+            Hi, I'm{" "}
+            <span className="bg-gradient-to-t from-red-900 to-blue-500 bg-clip-text text-transparent md:inline block md:text-8xl text-6xl md:mt-0 -mt-1">
+              Annu Singh
+            </span>
+          </h1>
+          <h2 className="text-white md:mt-6 mt-3 text-center md:text-4xl text-2xl capitalize font-semibold">
+            a{" "}
+            <span className="bg-gradient-to-t from-red-900 to-blue-500 bg-clip-text text-transparent">
+              MERN Stack Developer.
+            </span>
+          </h2>
+        </header>
+        <section className="w-full flex flex-col items-center mt-6 md:mt-8">
+          <p className="text-white text-md font-medium text-center md:w-1/2">
+            Frontend-focused Full Stack JavaScript Developer experienced in building responsive, real-time web apps using React.js, Node.js, MongoDB, and WebRTC. Experienced with GSAP, Locomotive, REST APIs, and modern deployment via Vercel &amp; Render.
+          </p>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-5 w-full mt-8">
+            <Link
+              to="/about"
+              className="flex items-center justify-center gap-2 px-8 py-3 rounded-3xl font-semibold text-xl bg-gradient-to-r from-[#DA58A0] to-[#63C1CE] text-white shadow hover:opacity-90 transition focus:outline-none focus:ring-2 focus:ring-pink-400 md:w-auto w-full capitalize"
+            >
+              <CiUser className="text-2xl" />
+              About
+            </Link>
+            <Link
+              to="/skill"
+              className="flex items-center justify-center gap-2 px-8 py-3 rounded-3xl font-semibold text-xl border border-zinc-300 hover:border-red-300 text-white md:w-auto w-full mt-5 md:mt-0 capitalize transition focus:outline-none focus:ring-2 focus:ring-blue-300"
+            >
+              <IoMdLink className="text-2xl" />
+              Skills
+            </Link>
+          </div>
+        </section>
+        <div className="w-full flex justify-center items-center mt-16">
           <Link
             to="/about"
-            className="text-md md:w-[10%] w-full px-8 py-3 flex items-center rounded-4xl  hover:shadow-[0_0_70px_1px_rgba(218,88,160,0.7)] justify-center gap-1.5 bg-gradient-to-r from-[#DA58A0] to-[#63C1CE] bg-amber-50 capitalize text-white text-xl font-semibold"
+            className="flex flex-col items-center group focus:outline-none focus:ring-2 focus:ring-blue-400"
+            aria-label="Scroll down to About"
           >
-            <span className="">
-              <CiUser />
+            <span className="text-zinc-500 text-2xl group-hover:text-blue-500 transition">
+              <GoArrowDown />
             </span>
-            about
-          </Link>
-
-          <Link
-            to="/skill"
-            className="text-md md:w-[10%] w-full md:mt-0 mt-5 px-8 py-3 flex items-center rounded-4xl    justify-center gap-1.5 border hover:border-red-300 capitalize text-white text-xl font-semibold"
-          >
-            <span className="mt-1"><IoMdLink /></span>
-            skills
+            <span className="sr-only">Scroll to About section</span>
           </Link>
         </div>
-        <Link to="/about">
-          <span className="text-zinc-500 text-xl absolute top-[95%] left-[50%]  ">
-            <GoArrowDown />
-          </span>
-        </Link>
-      </div>
+      </main>
     </div>
   );
 };
 
 export default Home;
 
-//bg-gradient-to-t from-red-900 to-blue-500 bg-clip-text text-transparent
-//shadow-[0_0_20px_5px_rgba(218,88,160,0.7)]

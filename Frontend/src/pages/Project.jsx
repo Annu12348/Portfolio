@@ -7,8 +7,8 @@ import { FiGithub } from "react-icons/fi";
 const Project = () => {
   const project = [
     {
-      image: "/vingo.png",
-      name: "Vingo Restorent",
+      image: "/quick.png",
+      name: "QuickBite Food Delivery website",
       description:
         "Full-stack Food Delivery Application with React, Redux, Node.js, Express, MongoDB, secure authentication, course management, role-based access, and interactive learning.",
       code: "https://github.com/Annu12348/Vingo",
@@ -156,23 +156,11 @@ const Project = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
         <div className="w-full   md:hidden ">
           {project.map((pro, index) => (
             <div
               key={index}
-              className="w-full mt-7 pb-4 bg-zinc-600 rounded-lg "
+              className="w-full mt-7  pb-4 bg-zinc-600 rounded-lg "
             >
               <div className="w-full h-[24vh]  rounded-t-lg overflow-hidden ">
                 <img
@@ -186,7 +174,7 @@ const Project = () => {
               <p className="px-2 tracking-tight leading-5 font-semibold mt-3 text-zinc-400">
                 {pro.description}
               </p>
-              <div className="px-2 flex items-center mt-4 justify-between">
+              <div className="px-2 flex  items-center mt-4 justify-between">
                 <button className="text-white font-semibold capitalize px-6 bg-blue-950 py-3 rounded">
                   {pro.category}
                 </button>
