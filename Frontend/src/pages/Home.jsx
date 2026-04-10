@@ -6,7 +6,7 @@ import { IoMdLink } from "react-icons/io";
 import { GoArrowDown } from "react-icons/go";
 
 /**
- * Home - Industry standard, production-ready component.
+ * Home - 100% production, industrial standard, only animate if truly valuable.
  */
 const Home = () => {
   return (
@@ -66,4 +66,3 @@ const Home = () => {
 };
 
 export default Home;
-
