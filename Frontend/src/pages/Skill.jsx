@@ -2,19 +2,14 @@ import React, { useState, useRef, useEffect } from "react";
 import Navigation from "../components/Navigation";
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from "react-icons/fa";
 import { IoLogoJavascript, IoChatbubblesOutline } from "react-icons/io5";
-import { SiExpress, SiReduxsaga } from "react-icons/si";
+import { SiExpress, SiFramer, SiMongodb, SiNextdotjs, SiPostman, SiReduxsaga,  SiRender,  SiSocketdotio, SiTailwindcss, SiTypescript, SiVercel } from "react-icons/si";
 import { DiMongodb } from "react-icons/di";
 import { VscVscode } from "react-icons/vsc";
 import { FiGithub } from "react-icons/fi";
 import { GiSteamLocomotive } from "react-icons/gi";
-import { MdSettingsApplications } from "react-icons/md";
+import { MdSettingsApplications, MdSettingsVoice } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import gsap from "gsap";
-
-/**
- * Skill page - displays categorized and filterable skills with 100% production animation
- * via framer-motion and gsap as per industrial standard.
- */
 
 const SKILL_CATEGORIES = [
   { name: "all skills", label: "All Skills" },
@@ -102,6 +97,76 @@ const SKILLS = [
     icon: <IoChatbubblesOutline aria-label="ChatGPT" />,
     description:
       "AI assistant for code, learning, and productivity improvement.",
+    category: "tool",
+  },
+  {
+    skill: "Mongoose",
+    icon: <SiMongodb aria-label="Mongoose" />,
+    description: "MongoDB schema modeling for Node.js.",
+    category: "backend",
+  },
+  {
+    skill: "Socket.io",
+    icon: <SiSocketdotio aria-label="Socket.io" />,
+    description: "Real-time event-based communication.",
+    category: "backend",
+  },
+  {
+    skill: "WebRTC",
+    icon: <MdSettingsVoice aria-label="WebRTC" />,
+    description: "Peer-to-peer media and data in browsers.",
+    category: "backend",
+  },
+  {
+    skill: "TypeScript",
+    icon: <SiTypescript aria-label="TypeScript" />,
+    description: "Typed superset of JavaScript.",
+    category: "language",
+  },
+  {
+    skill: "Next.js",
+    icon: <SiNextdotjs aria-label="Next.js" />,
+    description: "React framework for SSR & static sites.",
+    category: "frontend",
+  },
+  {
+    skill: "Framer Motion",
+    icon: <SiFramer aria-label="Framer Motion" />,
+    description: "Motion library for React for smooth, declarative animations.",
+    category: "frontend",
+  },
+  {
+    skill: "Tailwind CSS",
+    icon: <SiTailwindcss aria-label="Tailwind CSS" />,
+    description: "Utility-first CSS framework for rapidly building custom designs.",
+    category: "frontend",
+  },
+  {
+    skill: "MongoDB Compass",
+    icon: <SiMongodb aria-label="MongoDB Compass" />,
+    description:
+      "Official MongoDB GUI for efficient, production-ready database management.",
+    category: "tool",
+  },
+  {
+    skill: "Postman",
+    icon: <SiPostman aria-label="Postman" />,
+    description:
+      "Industry-standard tool for API testing and collaboration.",
+    category: "tool",
+  },
+  {
+    skill: "Render",
+    icon: <SiRender aria-label="Render" />,
+    description:
+      "Production deployment platform for modern apps and services.",
+    category: "tool",
+  },
+  {
+    skill: "Vercel",
+    icon: <SiVercel aria-label="Vercel" />,
+    description:
+      "Enterprise-grade platform for frontend deployment and hosting.",
     category: "tool",
   },
 ];
