@@ -166,6 +166,16 @@ const PROJECTS = [
     techStack: "React.JS, Node.JS, Express.JS, MongoDB"
   },
   {
+    image: "/e.png",
+    name: "E - Commerce Web Application",
+    description:
+      "AI-powered E - Commerce Web Application system with JWT authentication, role-based access, analytics dashboard, notifications, file uploads, and productivity insights.",
+    code: "https://github.com/Annu12348/task01",
+    link: "https://ecommerce-weld-eight-hu35wtmvl7.vercel.app",
+    category: "Full Stack",
+    techStack: "React.JS, Node.JS, Express.JS, MongoDB"
+  },
+  {
     image: "/employee.png",
     name: "AI Powered Employee Task Management System",
     description:
